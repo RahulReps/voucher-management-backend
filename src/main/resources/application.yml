@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: voucher-api
+
+  datasource:
+    url: jdbc:postgresql://dpg-ctr65sogph6c73ctpbb0-a.singapore-postgres.render.com/vouchers_xxik
+    username: root
+    password: uuXzL2b6etY54lT73VuZaXQagBYXxnRC
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        transaction:
+          jta:
+            platform: org.hibernate.engine.transaction.jta.platform.internal.AtomikosJtaPlatform
+
+
+server:
+  port: 8080
+
+jwt:
+  secret: 7ZXK0CVrQoRx7rn1u9bwPpJgHkExXn8NqVoAZGiYW/c=
+  expiration:
+    hours: 10
